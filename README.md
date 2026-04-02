@@ -2,6 +2,7 @@
 
 A full-stack library management system built with **Python Flask**, **C++**, and **Vanilla JavaScript**. Manage books, members, issue tracking, and activity logs with an intuitive and responsive web interface.
 
+![Library Management](static/logo.png)
 
 ---
 
@@ -375,7 +376,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Satyam** - Full Stack Developer
 
-- GitHub: [me](https://github.com/Satyam0202)
+- GitHub: [@yourgithubusername](https://github.com/yourgithubusername)
 - Email: m4740600@gmail.com
 
 ---
@@ -412,4 +413,3 @@ For issues, questions, or suggestions:
 **⭐ If you found this helpful, please give it a star on GitHub!**
 
 Happy Reading! 📚✨
-

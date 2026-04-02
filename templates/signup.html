@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body
+        {
+            background: linear-gradient(135deg,#8fbf8f,#a8cfa8);
+        }
+        #main
+        {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            padding: 20px;
+        }
+        #left
+        {
+            width: 350px;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #heading h2
+        {
+            text-align: center;
+            color: #1e293b;
+        }
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form input
+        {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #4caf50;
+            outline: none;
+            width: 100%;
+            background: #e2e8f0;
+        }
+        form input:focus
+        {
+            border: 1px solid #2563eb;
+            background: white;
+        }
+        /* BUTTON */
+        button
+        {
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(to right,#2563eb,#1d4ed8);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover
+        {
+            background: linear-gradient(to right,#16a34a,#15803d);
+            transform: scale(1.05);
+        }
+        button:active
+        {
+            transform: scale(0.98);
+        }
+        /* LOGIN TEXT */
+        #login
+        {
+            text-align: center;
+            font-size: 14px;
+            color: #1e293b;
+        }
+        #login a
+        {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #login a:hover
+        {
+            color: #16a34a;
+        }
+        #right img
+        {
+            width: 320px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        }
+        /* RESPONSIVE */
+        @media (max-width:768px)
+        {
+            #main
+            {
+                flex-direction: column;
+                gap: 30px;
+            }
+            #right img
+            {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="left">
+        <div id="heading">
+            <h2>Sign Up</h2>
+        </div>
+        <!-- COMMENT: Changed from form submission to fetch API call -->
+        <form id="signupForm">
+            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="pass" name="pass" placeholder="Password" required>
+            <input type="password" id="con_pass" name="con_pass" placeholder="Confirm Password" required>
+            <!-- COMMENT: Changed onclick to prevent form submission -->
+            <button type="button" onclick="handleSignup()">Create Account</button>
+        </form>
+        <div id="login">
+            Already have an account? 
+            <a href="/login_page">Login</a>
+        </div>
+    </div>
+    <div id="right">
+        <img src="/static/create.png" alt="Signup Image">
+    </div>
+</div>
+
+<!-- COMMENT: JavaScript for signup form handling -->
+<script>
+    // COMMENT: Handle signup with fetch API instead of form submission
+    async function handleSignup()
+    {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let phone = document.getElementById("phone").value;
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("pass").value;
+        let con_pass = document.getElementById("con_pass").value;
+
+        if(!fname || !lname || !phone || !email || !pass || !con_pass)
+        {
+            alert("❌ Please fill all fields");
+            return;
+        }
+
+        if(pass !== con_pass)
+        {
+            alert("❌ Passwords do not match");
+            return;
+        }
+
+        try
+        {
+            let formData = new FormData();
+            formData.append("fname", fname);
+            formData.append("lname", lname);
+            formData.append("phone", phone);
+            formData.append("email", email);
+            formData.append("pass", pass);
+            formData.append("con_pass", con_pass);
+
+            // COMMENT: Call signup API endpoint
+            let response = await fetch("/signup", 
+            {
+                method: "POST",
+                body: formData
+            });
+
+            let data = await response.json();
+
+            if(data.status === "success")
+            {
+                // COMMENT: Redirect to login on successful signup
+                alert("✅ " + data.message);
+                window.location.href = "/login_page";
+            }
+            else
+            {
+                alert("❌ " + data.message);
+            }
+        }
+        catch(err)
+        {
+            console.error("Signup Error:", err);
+            alert("❌ Signup failed. Please try again.");
+        }
+    }
+
+    // COMMENT: Allow Enter key to submit signup form
+    document.getElementById("signupForm").addEventListener("keypress", function(event)
+    {
+        if(event.key === "Enter")
+        {
+            event.preventDefault();
+            handleSignup();
+        }
+    });
+</script>
+</body>
+</html> 

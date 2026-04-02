@@ -1,0 +1,93 @@
+1001,To Kill a Mockingbird,Harper Lee,Fiction,300,5,0,true
+1002,1984,George Orwell,Fiction,350,5,0,true
+1003,Pride and Prejudice,Jane Austen,Romance,280,5,0,true
+1004,The Great Gatsby,F. Scott Fitzgerald,Fiction,400,4,0,true
+1005,The Catcher in the Rye,J.D. Salinger,Fiction,320,4,0,true
+1006,Moby Dick,Herman Melville,Adventure,450,4,0,true
+1007,War and Peace,Leo Tolstoy,Historical,500,5,0,true
+1008,The Hobbit,J.R.R. Tolkien,Fantasy,380,5,0,true
+1009,The Lord of the Rings,J.R.R. Tolkien,Fantasy,550,5,0,true
+1010,Harry Potter and the Sorcerer's Stone,J.K. Rowling,Fantasy,350,5,0,true
+1011,Harry Potter and the Chamber of Secrets,J.K. Rowling,Fantasy,360,5,0,true
+1012,Harry Potter and the Prisoner of Azkaban,J.K. Rowling,Fantasy,370,5,0,true
+1013,Harry Potter and the Goblet of Fire,J.K. Rowling,Fantasy,400,5,0,true
+1014,Harry Potter and the Order of the Phoenix,J.K. Rowling,Fantasy,450,4,0,true
+1015,Harry Potter and the Half-Blood Prince,J.K. Rowling,Fantasy,420,5,0,true
+1016,Harry Potter and the Deathly Hallows,J.K. Rowling,Fantasy,480,5,0,true
+1017,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",C.S. Lewis,Fantasy,320,5,0,true
+1018,Dune,Frank Herbert,Science Fiction,480,5,0,true
+1019,Foundation,Isaac Asimov,Science Fiction,400,5,0,true
+1020,"I, Robot",Isaac Asimov,Science Fiction,300,4,0,true
+1021,Brave New World,Aldous Huxley,Science Fiction,380,4,0,true
+1022,The Time Machine,H.G. Wells,Science Fiction,250,4,0,true
+1023,Twenty Thousand Leagues Under the Sea,Jules Verne,Adventure,420,4,0,true
+1024,Journey to the Center of the Earth,Jules Verne,Adventure,380,4,0,true
+1025,Around the World in Eighty Days,Jules Verne,Adventure,350,4,0,true
+1026,The Three Musketeers,Alexandre Dumas,Adventure,420,4,0,true
+1027,The Count of Monte Cristo,Alexandre Dumas,Adventure,480,5,0,true
+1028,A Tale of Two Cities,Charles Dickens,Historical,450,4,0,true
+1029,Oliver Twist,Charles Dickens,Fiction,400,4,0,true
+1030,Great Expectations,Charles Dickens,Fiction,420,4,0,true
+1031,Jane Eyre,Charlotte Brontë,Romance,380,5,0,true
+1032,Wuthering Heights,Emily Brontë,Romance,360,4,0,true
+1033,The Scarlet Letter,Nathaniel Hawthorne,Historical,300,3,0,true
+1034,The Hunchback of Notre-Dame,Victor Hugo,Historical,420,4,0,true
+1035,Les Misérables,Victor Hugo,Historical,500,5,0,true
+1036,Frankenstein,Mary Shelley,Science Fiction,320,4,0,true
+1037,Dracula,Bram Stoker,Horror,380,4,0,true
+1038,The Picture of Dorian Gray,Oscar Wilde,Fiction,300,4,0,true
+1039,Alice's Adventures in Wonderland,Lewis Carroll,Fantasy,280,4,0,true
+1040,Through the Looking-Glass,Lewis Carroll,Fantasy,290,4,0,true
+1041,The Adventures of Sherlock Holmes,Arthur Conan Doyle,Mystery,350,5,0,true
+1042,A Study in Scarlet,Arthur Conan Doyle,Mystery,320,4,0,true
+1043,The Odyssey,Homer,Epic,450,4,0,true
+1044,The Iliad,Homer,Epic,480,4,0,true
+1045,Beowulf,Anonymous,Epic,350,4,0,true
+1046,Don Quixote,Miguel de Cervantes,Fiction,500,4,0,true
+1047,Robinson Crusoe,Daniel Defoe,Adventure,320,4,0,true
+1048,Gulliver's Travels,Jonathan Swift,Adventure,380,3,0,true
+1049,The Invisible Man,H.G. Wells,Science Fiction,280,4,0,true
+1050,Treasure Island,Robert Louis Stevenson,Adventure,320,4,0,true
+1051,Dr. Jekyll and Mr. Hyde,Robert Louis Stevenson,Horror,280,4,0,true
+1052,The Strange Case of Dr. Jekyll and Mr. Hyde,Robert Louis Stevenson,Horror,290,4,0,true
+1053,Robinson Crusoe,Daniel Defoe,Adventure,320,4,0,true
+1054,Ivanhoe,Sir Walter Scott,Historical,450,4,0,true
+1055,A Christmas Carol,Charles Dickens,Fiction,200,5,0,true
+1056,The Pickwick Papers,Charles Dickens,Fiction,450,4,0,true
+1057,Bleak House,Charles Dickens,Fiction,500,4,0,true
+1058,Little Women,Louisa May Alcott,Fiction,380,5,0,true
+1059,Jo's Boys,Louisa May Alcott,Fiction,350,4,0,true
+1060,The Swiss Family Robinson,Johann David Wyss,Adventure,380,4,0,true
+1061,Black Beauty,Anna Sewell,Fiction,300,4,0,true
+1062,Anne of Green Gables,L.M. Montgomery,Fiction,350,5,0,true
+1063,The Secret Garden,Frances Hodgson Burnett,Fiction,320,5,0,true
+1064,Heidi,Johanna Spyri,Fiction,300,4,0,true
+1065,The Boy Who Harnessed the Wind,William Kamkwamba,Biography,380,5,0,true
+1066,The 7 Habits of Highly Effective People,Stephen Covey,Self-Help,450,5,0,true
+1067,"Thinking, Fast and Slow",Daniel Kahneman,Psychology,480,5,0,true
+1068,Educated,Tara Westover,Biography,420,5,0,true
+1069,Atomic Habits,James Clear,Self-Help,400,5,0,true
+1070,The Lean Startup,Eric Ries,Business,380,4,0,true
+1071,Good to Great,Jim Collins,Business,450,5,0,true
+1072,Start with Why,Simon Sinek,Business,380,5,0,true
+1073,Deep Work,Cal Newport,Self-Help,350,5,0,true
+1074,The Man Who Mistook His Wife for a Hat,Oliver Sacks,Psychology,380,4,0,true
+1075,Mindset,Carol S. Dweck,Psychology,320,5,0,true
+1076,Man's Search for Meaning,Viktor E. Frankl,Philosophy,280,5,0,true
+1077,The Brothers Karamazov,Fyodor Dostoevsky,Fiction,500,5,0,true
+1078,Crime and Punishment,Fyodor Dostoevsky,Fiction,480,5,0,true
+1079,Anna Karenina,Leo Tolstoy,Romance,500,5,0,true
+1080,Madame Bovary,Gustave Flaubert,Romance,380,4,0,true
+1081,The Stranger,Albert Camus,Fiction,300,4,0,true
+1082,Beloved,Toni Morrison,Fiction,380,5,0,true
+1083,The Handmaid's Tale,Margaret Atwood,Science Fiction,400,5,0,true
+1084,One Hundred Years of Solitude,Gabriel García Márquez,Magical Realism,450,5,0,true
+1085,The Marvelous Adventures of Catullus Kelly,Andy Weir,Science Fiction,350,4,0,true
+1086,The Martian,Andy Weir,Science Fiction,400,5,0,true
+1087,Catch-22,Joseph Heller,Satire,420,4,0,true
+1088,Slaughterhouse-Five,Kurt Vonnegut,Fiction,360,4,0,true
+1089,The Bell Jar,Sylvia Plath,Fiction,320,4,0,true
+1090,A Clockwork Orange,Anthony Burgess,Fiction,380,4,0,true
+1091,Lolita,Vladimir Nabokov,Fiction,400,3,0,true
+1092,American Psycho,Bret Easton Ellis,Thriller,450,3,0,true
+1093,Fight Club,Chuck Palahniuk,Thriller,380,4,0,true

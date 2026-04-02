@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            /* min-height: 100vh;
+            min-width: 100vw;     */
+            overflow-y: hidden;
+        }
+        #main
+        {
+            background-color: #2727;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        #left
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            padding: 30px;
+            padding-bottom: 40px;
+            padding-top: 40px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(221, 208, 208, 0.2); 
+            backdrop-filter: blur(15px);    
+        }
+        form
+        {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        form input
+        {
+            text-align: left;
+            padding: 10px;  
+            border:1px solid green;
+            border-radius: 15px;
+
+        }
+        form h5
+        {
+            margin-bottom: -20px;   
+        }
+        form input:focus
+        {
+            color:green;
+            border: 1px solid blue;
+            outline: none;
+        }
+        form #submit
+        {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            padding-bottom: 12px;
+            padding-top: 12px;
+
+            padding-left: 20px;
+            padding-right: 20px;
+            cursor: pointer;
+            border: none;
+        }
+        form #submit:hover
+        {
+            background-color: green;
+        }
+        form #submit:active
+        {
+            outline: none;
+            background:rgb(214, 214, 45);
+            color: black;
+        }
+        #sign_up
+        {
+            margin-top: 20px;
+        }
+        #sign_up span
+        {
+            text-decoration: none;   
+            cursor: pointer;
+        }
+        #sign_up a
+        {
+            text-decoration: none;
+            color: inherit;
+        }
+        #signup:hover
+        {
+            color:blue;
+        }
+        #toggle
+        {
+            cursor: pointer;
+        }
+        #toggle:hover
+        {
+            color:green;
+            font-weight: bold;
+        }
+        @media (max-width:768px)
+        {
+            #main
+            {
+                /* flex-direction: ; */
+                gap: 20px;
+            }
+            #right img
+            {
+                width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="heading"><h2>Sign in</h2></div>
+            <div id="form">
+                <!-- COMMENT: Changed from form submission to fetch API call -->
+                <form id="loginForm">
+                    <h5>Email address</h5>
+                    <input type="email" id="email" name="email" required>
+
+                    <h5>Password</h5>
+                    <div class="password_box">
+                        <input type="password" id="password" name="password" required>
+                        <span id="toggle">show</span>
+                    </div>
+                    <!-- COMMENT: Changed onclick to prevent form submission -->
+                    <input type="button" id="submit" name="sign" value="Sign In" onclick="handleLogin()">
+                </form>
+                <div id="sign_up" >
+                    Don't have account?<span><b><a id="signup" href="/signup_page"><b>Sign Up</b></a></b></span> 
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <img src="static/image.png" alt="image">
+            <p style="color:red;">{{ error }}</p>
+        </div>
+    </div>
+
+    <script>
+        const toggle=document.getElementById("toggle");
+        const password=document.getElementById("password");
+        toggle.addEventListener("click",function()
+        {
+            if(password.type=="password")
+            {
+                password.type="text";
+                toggle.innerText="hide";
+            }
+            else
+            {
+                password.type="password";
+                toggle.innerText="show";
+            }
+        });
+
+        // COMMENT: Handle login with fetch API instead of form submission
+        async function handleLogin()
+        {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if(!email || !password)
+            {
+                alert("Please fill all fields");
+                return;
+            }
+
+            try
+            {
+                let formData = new FormData();
+                formData.append("email", email);
+                formData.append("password", password);
+
+                // COMMENT: Call login API endpoint
+                let response = await fetch("/login", 
+                {
+                    method: "POST",
+                    body: formData
+                });
+
+                let data = await response.json();
+
+                if(data.status === "success")
+                {
+                    // COMMENT: Save email and user name to localStorage for profile loading
+                    localStorage.setItem("userEmail", email);
+                    localStorage.setItem("userName", data.user);
+                    window.location.href = "/dashboard";
+                }
+                else
+                {
+                    alert("❌ " + data.message);
+                }
+            }
+            catch(err)
+            {
+                console.error("Login Error:", err);
+                alert("❌ Login failed. Please try again.");
+            }
+        }
+
+        // COMMENT: Allow Enter key to submit login form
+        document.getElementById("loginForm").addEventListener("keypress", function(event)
+        {
+            if(event.key === "Enter")
+            {
+                event.preventDefault();
+                handleLogin();
+            }
+        });
+    </script>
+</body>
+</html>
