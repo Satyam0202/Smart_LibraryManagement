@@ -375,7 +375,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Satyam** - Full Stack Developer
 
-- GitHub: [@yourgithubusername](https://github.com/Satyam0202)
+- GitHub: [me](https://github.com/Satyam0202)
 - Email: m4740600@gmail.com
 
 ---
